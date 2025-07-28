@@ -41,9 +41,26 @@
     <!-- Header & Navigation -->
     <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="#home" class="flex items-center">
-                <!-- User's Uploaded Logo Image with a debug border -->
-                <img src="https://googleusercontent.com/file_content/1" alt="Smile HQ Dental Clinic Logo" class="h-14 w-auto border-4 border-red-500">
+            <a href="#home" class="flex items-center space-x-3">
+                <!-- FINAL Accurate Inline SVG Logo -->
+                <div class="w-12 h-auto">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                            <!-- Darkest part -->
+                            <path d="M91.6,41.9C85,54.8,72.4,62.5,58.1,62.5c-5.1,0-10-1.2-14.4-3.4L54.3,83c10.4,2.5,21.2-0.4,29.3-7.5 C94.5,66,97.7,53.8,91.6,41.9z" fill="#005F73"/>
+                            <!-- Medium-dark part -->
+                            <path d="M43.7,59.1c-14.4,0-27-7.7-33.6-20.6C-2.8,16.8,4.5,2.6,18.8-3.1c4.5-1.8,9.3-2.7,14.2-2.7 c10.9,0,21.2,4.5,28.3,12.1L50.7,24L43.7,59.1z" fill="#007B8E"/>
+                            <!-- Medium-light part -->
+                            <path d="M61.3,11.3L50.7,24l-9.3,35.1L2.1,38.5C-2.8,24.7,4.5,10.5,18.8,4.8 C26.6-0.4,36.4-1.5,45.2,1.9L61.3,11.3z" fill="#52B6C6"/>
+                            <!-- Lightest part -->
+                            <path d="M45.2,1.9C54-1.5,63.8-0.4,71.6,4.8c14.3,5.7,21.6,19.9,16.7,33.7L61.3,11.3L45.2,1.9z" fill="#A4DDE8"/>
+                        </g>
+                    </svg>
+                </div>
+                <div>
+                    <div class="text-xl font-medium text-text-primary leading-tight">Smile HQ</div>
+                    <div class="text-xs font-light text-text-secondary tracking-widest leading-tight">DENTAL CLINIC</div>
+                </div>
             </a>
             <div class="hidden md:flex items-center space-x-8">
                 <a href="#about" class="text-text-secondary hover:text-primary-dark transition-colors duration-300">About Us</a>
