@@ -34,6 +34,12 @@
         html {
             scroll-behavior: smooth;
         }
+        .review-card {
+            display: none;
+        }
+        .review-card.active {
+            display: flex;
+        }
     </style>
 </head>
 <body class="bg-secondary font-sans">
@@ -65,6 +71,7 @@
             <div class="hidden md:flex items-center space-x-8">
                 <a href="#about" class="text-text-secondary hover:text-primary-dark transition-colors duration-300">About Us</a>
                 <a href="#services" class="text-text-secondary hover:text-primary-dark transition-colors duration-300">Services</a>
+                <a href="#reviews" class="text-text-secondary hover:text-primary-dark transition-colors duration-300">Reviews</a>
                 <a href="#contact" class="text-text-secondary hover:text-primary-dark transition-colors duration-300">Contact</a>
             </div>
             <a href="tel:+917339827993" class="hidden md:block bg-primary hover:bg-primary-dark text-white font-semibold px-5 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
@@ -79,6 +86,7 @@
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
             <a href="#about" class="block text-text-secondary hover:text-primary-dark transition-colors duration-300">About Us</a>
             <a href="#services" class="block text-text-secondary hover:text-primary-dark transition-colors duration-300">Services</a>
+            <a href="#reviews" class="block text-text-secondary hover:text-primary-dark transition-colors duration-300">Reviews</a>
             <a href="#contact" class="block text-text-secondary hover:text-primary-dark transition-colors duration-300">Contact</a>
             <a href="tel:+917339827993" class="block mt-4 w-full text-center bg-primary hover:bg-primary-dark text-white font-semibold px-5 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
                 Call Us Now
@@ -142,7 +150,7 @@
                     <p class="mt-3 text-lg text-text-secondary max-w-2xl mx-auto">We offer a comprehensive range of dental services to meet all your oral health needs.</p>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Service Card 1 -->
+                    <!-- Service Cards -->
                     <div class="bg-white p-8 text-center rounded-lg shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center">
                         <div class="bg-primary-light p-4 rounded-full mb-4">
                             <svg class="w-12 h-12 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" /></svg>
@@ -150,7 +158,6 @@
                         <h3 class="text-xl font-bold text-text-primary">General Dentistry</h3>
                         <p class="mt-3 text-text-secondary">Routine check-ups, cleanings, fillings, and preventive care to maintain your oral health.</p>
                     </div>
-                    <!-- Service Card 2 -->
                     <div class="bg-white p-8 text-center rounded-lg shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center">
                          <div class="bg-primary-light p-4 rounded-full mb-4">
                             <svg class="w-12 h-12 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.898 20.553L16.5 21.75l-.398-1.197a3.375 3.375 0 00-2.456-2.456L12.75 18l1.197-.398a3.375 3.375 0 002.456-2.456L16.5 14.25l.398 1.197a3.375 3.375 0 002.456 2.456L20.25 18l-1.197.398a3.375 3.375 0 00-2.456 2.456z" /></svg>
@@ -158,7 +165,6 @@
                         <h3 class="text-xl font-bold text-text-primary">Cosmetic Dentistry</h3>
                         <p class="mt-3 text-text-secondary">Enhance your smile with teeth whitening, veneers, bonding, and smile makeovers.</p>
                     </div>
-                    <!-- Service Card 3 -->
                     <div class="bg-white p-8 text-center rounded-lg shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center">
                          <div class="bg-primary-light p-4 rounded-full mb-4">
                            <svg class="w-12 h-12 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
@@ -166,7 +172,6 @@
                         <h3 class="text-xl font-bold text-text-primary">Dental Implants</h3>
                         <p class="mt-3 text-text-secondary">A permanent solution for missing teeth that looks, feels, and functions like natural teeth.</p>
                     </div>
-                    <!-- Service Card 4 -->
                     <div class="bg-white p-8 text-center rounded-lg shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center">
                          <div class="bg-primary-light p-4 rounded-full mb-4">
                             <svg class="w-12 h-12 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75l3 3m0 0l3-3m-3 3v-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
@@ -174,7 +179,6 @@
                         <h3 class="text-xl font-bold text-text-primary">Orthodontics</h3>
                         <p class="mt-3 text-text-secondary">Straighten your teeth and correct bite issues with modern braces or clear aligners.</p>
                     </div>
-                    <!-- Service Card 5 -->
                     <div class="bg-white p-8 text-center rounded-lg shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center">
                          <div class="bg-primary-light p-4 rounded-full mb-4">
                             <svg class="w-12 h-12 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m5.231 13.481L15 17.25m-4.5 4.5l-1.5-1.5m0 0l-1.5 1.5m-1.5-1.5l1.5-1.5M3 16.5l7.5-7.5 7.5 7.5" /></svg>
@@ -182,13 +186,154 @@
                         <h3 class="text-xl font-bold text-text-primary">Root Canal Therapy</h3>
                         <p class="mt-3 text-text-secondary">Relieve tooth pain and save your natural tooth with our gentle root canal treatments.</p>
                     </div>
-                    <!-- Service Card 6 -->
                     <div class="bg-white p-8 text-center rounded-lg shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center">
                          <div class="bg-primary-light p-4 rounded-full mb-4">
                             <svg class="w-12 h-12 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9 9.75h.008v.008H9V9.75zm6 0h.008v.008H15V9.75z" /></svg>
                         </div>
                         <h3 class="text-xl font-bold text-text-primary">Pediatric Dentistry</h3>
                         <p class="mt-3 text-text-secondary">Specialized, friendly care for our youngest patients to ensure a lifetime of healthy smiles.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section id="reviews" class="py-20 md:py-28 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-text-primary">What Our Patients Say</h2>
+                    <p class="mt-3 text-lg text-text-secondary max-w-2xl mx-auto">Hear directly from our happy patients. Their smiles are our greatest reward.</p>
+                </div>
+                <div class="relative bg-secondary p-8 rounded-lg shadow-lg">
+                    <!-- Review Slider Container -->
+                    <div id="review-slider">
+                        <!-- Review Card 1 -->
+                        <div class="review-card active flex-col min-h-[280px] md:min-h-[240px]">
+                            <div class="flex items-center mb-4">
+                                <!-- 5 stars -->
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            </div>
+                            <p class="text-text-secondary italic mb-4 flex-grow">"Just got my teeth checked and honestly, the whole experience was great. The advice I received felt really genuine and not pushy at all. I had my teeth scaled too, and the process was super smooth and completely painless—which I wasn’t expecting! Even the post-consultation tips were clear, helpful, and felt like they truly cared."</p>
+                            <div class="flex items-center mt-auto">
+                                <img class="w-12 h-12 rounded-full mr-4" src="https://placehold.co/100x100/E0F7FA/005F73?text=N" alt="Avatar of Nikhil Agarwal">
+                                <div>
+                                    <p class="font-bold text-text-primary">Nikhil Agarwal</p>
+                                    <p class="text-sm text-gray-500">Google Review</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Review Card 2 -->
+                        <div class="review-card flex-col min-h-[280px] md:min-h-[240px]">
+                            <div class="flex items-center mb-4">
+                                <!-- 5 stars -->
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            </div>
+                            <p class="text-text-secondary italic mb-4 flex-grow">"I visited to get my teeth cleaned and to fill a gap in my teeth. From the moment I arrived, I felt welcomed... Dr Anita took great care of me... The procedure was done with great skill, and I’m fully satisfied with the results. I highly recommend their services."</p>
+                            <div class="flex items-center mt-auto">
+                                <img class="w-12 h-12 rounded-full mr-4" src="https://placehold.co/100x100/E0F7FA/005F73?text=A" alt="Avatar of asif ahmed">
+                                <div>
+                                    <p class="font-bold text-text-primary">asif ahmed</p>
+                                    <p class="text-sm text-gray-500">Google Review</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Review Card 3 -->
+                        <div class="review-card flex-col min-h-[280px] md:min-h-[240px]">
+                            <div class="flex items-center mb-4">
+                                <!-- 5 stars -->
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            </div>
+                            <p class="text-text-secondary italic mb-4 flex-grow">"Dr. Anita is simply amazing! From the moment I walked in, I felt welcomed and at ease. The office is spotless and modern. The care and attention to detail were outstanding. I’ve never had such a positive dental experience and highly recommend this clinic!"</p>
+                            <div class="flex items-center mt-auto">
+                                <img class="w-12 h-12 rounded-full mr-4" src="https://placehold.co/100x100/E0F7FA/005F73?text=V" alt="Avatar of vidushi jha">
+                                <div>
+                                    <p class="font-bold text-text-primary">vidushi jha</p>
+                                    <p class="text-sm text-gray-500">Google Review</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Review Card 4 -->
+                        <div class="review-card flex-col min-h-[280px] md:min-h-[240px]">
+                            <div class="flex items-center mb-4">
+                                <!-- 5 stars -->
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            </div>
+                            <p class="text-text-secondary italic mb-4 flex-grow">"Recently got my father's RCT done at smile hq, and honestly speaking Dr. Anita has been good at her job. She took great deal in explaining the whole thing... I'd highly recommend her clinic for resolving dental issues smoothly at very reasonable fee."</p>
+                            <div class="flex items-center mt-auto">
+                                <img class="w-12 h-12 rounded-full mr-4" src="https://placehold.co/100x100/E0F7FA/005F73?text=N" alt="Avatar of Neeraj Naagar">
+                                <div>
+                                    <p class="font-bold text-text-primary">Neeraj Naagar</p>
+                                    <p class="text-sm text-gray-500">Google Review</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Review Card 5 -->
+                        <div class="review-card flex-col min-h-[280px] md:min-h-[240px]">
+                            <div class="flex items-center mb-4">
+                                <!-- 5 stars -->
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            </div>
+                            <p class="text-text-secondary italic mb-4 flex-grow">"I recently had a teeth cleaning appointment, and it was a wonderful experience! The staff were incredibly friendly, and the environment was warm and welcoming, making me feel at ease throughout the entire process. Highly recommend this place!"</p>
+                            <div class="flex items-center mt-auto">
+                                <img class="w-12 h-12 rounded-full mr-4" src="https://placehold.co/100x100/E0F7FA/005F73?text=S" alt="Avatar of Shreshtha Bhatnagar">
+                                <div>
+                                    <p class="font-bold text-text-primary">Shreshtha Bhatnagar</p>
+                                    <p class="text-sm text-gray-500">Google Review</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slider Arrows -->
+                    <button id="prev-review" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-2 shadow-md transition-colors z-10">
+                        <svg class="w-6 h-6 text-text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    </button>
+                    <button id="next-review" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-2 shadow-md transition-colors z-10">
+                        <svg class="w-6 h-6 text-text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </button>
+                </div>
+                <div class="text-center mt-12">
+                    <a href="https://g.page/r/CSGLQMadMXtdEAE/review" target="_blank" class="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 inline-block">
+                        Read More on Google
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Patient Story Section -->
+        <section id="patient-story" class="py-20 md:py-28 bg-secondary">
+            <div class="container mx-auto px-6">
+                <div class="bg-white rounded-lg shadow-xl p-8 md:p-12 lg:p-16 flex flex-col md:flex-row items-center gap-8">
+                    <div class="md:w-1/3 text-center">
+                        <div class="bg-primary-light inline-block p-6 rounded-full mb-4">
+                            <svg class="w-16 h-16 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        </div>
+                        <h2 class="text-2xl md:text-3xl font-bold text-text-primary">A Patient's Journey</h2>
+                        <p class="mt-2 text-lg text-primary font-semibold">- Omprakash Bajroliya</p>
+                    </div>
+                    <div class="md:w-2/3 md:border-l-4 md:border-primary-light md:pl-8">
+                        <p class="text-text-secondary leading-relaxed mb-4">"I had been struggling with a wisdom tooth problem for quite some time. Prior to visiting Smile HQ Dental Clinic, I had consultations at HDental Genova in Italy and Dentistanbul in Turkey, but unfortunately, neither was able to offer a satisfactory solution."</p>
+                        <p class="text-text-secondary leading-relaxed mb-4">"When I visited Smile HQ and met Dr. Anita, everything changed. She immediately assessed my case and assured me that it was a minor issue that could be resolved within just 15 days. Her confidence and expertise were incredibly reassuring."</p>
+                        <p class="text-text-secondary leading-relaxed font-semibold">"The entire team at Smile HQ is professional, caring, and welcoming. I especially want to thank Dr. Anita for her helpful and experienced approach. Her kind demeanor and expert care made all the difference. I’m very satisfied with my experience and highly recommend Smile HQ Dental Clinic to anyone seeking quality dental care."</p>
                     </div>
                 </div>
             </div>
@@ -203,7 +348,7 @@
                 </div>
                 <div class="flex flex-col lg:flex-row gap-8">
                     <!-- Contact Info -->
-                    <div class="lg:w-1/3 bg-primary-light p-8 rounded-lg shadow-lg">
+                    <div class="lg:w-1/3 bg-secondary p-8 rounded-lg shadow-lg">
                         <h3 class="text-2xl font-bold text-text-primary mb-6">Contact Information</h3>
                         
                         <div class="flex items-start space-x-4 mb-6">
@@ -269,13 +414,40 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Close mobile menu when a link is clicked
         const mobileMenuLinks = mobileMenu.querySelectorAll('a');
         mobileMenuLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
             });
         });
+
+        // JavaScript for review slider
+        const reviews = document.querySelectorAll('.review-card');
+        const prevButton = document.getElementById('prev-review');
+        const nextButton = document.getElementById('next-review');
+        let currentReviewIndex = 0;
+
+        function showReview(index) {
+            reviews.forEach((review, i) => {
+                review.classList.remove('active');
+                if (i === index) {
+                    review.classList.add('active');
+                }
+            });
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentReviewIndex = (currentReviewIndex - 1 + reviews.length) % reviews.length;
+            showReview(currentReviewIndex);
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentReviewIndex = (currentReviewIndex + 1) % reviews.length;
+            showReview(currentReviewIndex);
+        });
+
+        // Show the first review initially
+        showReview(currentReviewIndex);
     </script>
 
 </body>
