@@ -43,6 +43,7 @@
 </head>
 <body class="bg-secondary font-sans text-text-secondary">
 
+    <!-- Header & Navigation -->
     <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#home" class="flex items-center space-x-3">
@@ -77,6 +78,7 @@
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section id="home" class="relative bg-primary-light">
             <div class="container mx-auto px-6 py-20 md:py-32 flex flex-col md:flex-row items-center justify-between">
                 <div class="md:w-1/2 text-center md:text-left z-10">
@@ -105,6 +107,7 @@
 
         ---
 
+        <!-- About Section -->
         <section id="about" class="py-20 md:py-28 bg-white">
             <div class="container mx-auto px-6">
                 <div class="flex flex-col md:flex-row items-center gap-12 md:gap-16">
@@ -128,6 +131,7 @@
 
         ---
 
+        <!-- Services Section -->
         <section id="services" class="py-20 md:py-28 bg-secondary">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
@@ -183,24 +187,29 @@
 
         ---
 
+        <!-- Image Gallery Section -->
         <section id="gallery" class="py-20 md:py-28 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-text-primary">A Look Inside Our Clinic</h2>
                     <p class="mt-4 text-lg text-text-secondary max-w-2xl mx-auto">Experience the clean, modern, and comfortable environment we've created for your care.</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <img src="./Images/p2.png" alt="A smiling patient with a dentist in a modern clinic." class="rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105 object-cover h-full w-full">
-                    <img src="./Images/p3.png" alt="A shot of a modern dental chair and equipment." class="rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105 object-cover h-full w-full">
-                    <img src="./Images/p4.png" alt="A dental hygienist performing a cleaning." class="rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105 object-cover h-full w-full">
-                    <img src="./Images/p5.png" alt="The front desk and waiting area of the clinic." class="rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105 object-cover h-full w-full">
-                    <img src="./Images/p1.png" alt="The front desk and waiting area of the clinic." class="rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105 object-cover h-full w-full">
+                <div class="relative w-full max-w-4xl mx-auto h-[400px] md:h-[550px] overflow-hidden rounded-lg shadow-xl">
+                    <img id="gallery-image" src="https://images.unsplash.com/photo-1549429440-20593ddf613c?q=80&w=1964&auto=format&fit=crop"
+                         alt="Creative dental art showing a clean tooth." class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out">
+                    <button id="prev-gallery" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-2 shadow-md transition-colors z-10">
+                        <svg class="w-6 h-6 text-text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    </button>
+                    <button id="next-gallery" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-2 shadow-md transition-colors z-10">
+                        <svg class="w-6 h-6 text-text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </button>
                 </div>
             </div>
         </section>
 
         ---
 
+        <!-- Reviews Section -->
         <section id="reviews" class="py-20 md:py-28 bg-secondary">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
@@ -210,57 +219,6 @@
                 <div class="relative bg-white p-8 rounded-lg shadow-lg">
                     <div id="review-slider" class="overflow-hidden">
                         <div class="review-card active flex-col min-h-[300px] p-6">
-                            <div class="flex items-center mb-4 text-yellow-400">
-                                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                <svg class="w-5 h-5 fill-current ml-1" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                <svg class="w-5 h-5 fill-current ml-1" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                <svg class="w-5 h-5 fill-current ml-1" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                <svg class="w-5 h-5 fill-current ml-1" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                            </div>
-                            <p class="text-text-secondary italic mb-4 flex-grow text-justify">"Just got my teeth checked and honestly, the whole experience was great. The advice I received felt really genuine and not pushy at all. I had my teeth scaled too, and the process was super smooth and completely painless—which I wasn’t expecting! Even the post-consultation tips were clear, helpful, and felt like they truly cared."</p>
-                            <div class="flex items-center mt-auto">
-                                <img class="w-12 h-12 rounded-full mr-4" src="https://placehold.co/100x100/E0F7FA/005F73?text=N" alt="Avatar of Nikhil Agarwal">
-                                <div>
-                                    <p class="font-bold text-text-primary">Nikhil Agarwal</p>
-                                    <p class="text-sm text-gray-500">Google Review</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="review-card flex-col min-h-[300px] p-6">
-                            <div class="flex items-center mb-4 text-yellow-400">
-                                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                <svg class="w-5 h-5 fill-current ml-1" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                <svg class="w-5 h-5 fill-current ml-1" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                <svg class="w-5 h-5 fill-current ml-1" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                <svg class="w-5 h-5 fill-current ml-1" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                            </div>
-                            <p class="text-text-secondary italic mb-4 flex-grow text-justify">"I visited to get my teeth cleaned and to fill a gap in my teeth. From the moment I arrived, I felt welcomed... Dr Anita took great care of me... The procedure was done with great skill, and I’m fully satisfied with the results. I highly recommend their services."</p>
-                            <div class="flex items-center mt-auto">
-                                <img class="w-12 h-12 rounded-full mr-4" src="https://placehold.co/100x100/E0F7FA/005F73?text=A" alt="Avatar of asif ahmed">
-                                <div>
-                                    <p class="font-bold text-text-primary">Asif Ahmed</p>
-                                    <p class="text-sm text-gray-500">Google Review</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="review-card flex-col min-h-[300px] p-6">
-                            <div class="flex items-center mb-4 text-yellow-400">
-                                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                <svg class="w-5 h-5 fill-current ml-1" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                <svg class="w-5 h-5 fill-current ml-1" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                <svg class="w-5 h-5 fill-current ml-1" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                <svg class="w-5 h-5 fill-current ml-1" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                            </div>
-                            <p class="text-text-secondary italic mb-4 flex-grow text-justify">"Dr. Anita is simply amazing! From the moment I walked in, I felt welcomed and at ease. The office is spotless and modern. The care and attention to detail were outstanding. I’ve never had such a positive dental experience and highly recommend this clinic!"</p>
-                            <div class="flex items-center mt-auto">
-                                <img class="w-12 h-12 rounded-full mr-4" src="https://placehold.co/100x100/E0F7FA/005F73?text=V" alt="Avatar of vidushi jha">
-                                <div>
-                                    <p class="font-bold text-text-primary">Vidushi Jha</p>
-                                    <p class="text-sm text-gray-500">Google Review</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="review-card flex-col min-h-[300px] p-6">
                             <div class="flex items-center mb-4 text-yellow-400">
                                 <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                                 <svg class="w-5 h-5 fill-current ml-1" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
@@ -295,6 +253,7 @@
         
         ---
 
+        <!-- Contact Section -->
         <section id="contact" class="py-20 md:py-28 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
@@ -334,9 +293,10 @@
                             Book Your Appointment
                         </a>
                     </div>
+                    <!-- Map -->
                     <div class="lg:w-2/3 h-96 lg:h-auto rounded-lg shadow-lg overflow-hidden">
                         <iframe
-                            src="https://maps.google.com/maps?q=26.844205337746324, 75.81490952196137&z=15&output=embed"
+                            src="https://maps.google.com/maps?q=26.844205337746324,75.81490952196137&z=15&output=embed"
                             width="100%"
                             height="100%"
                             style="border:0;"
@@ -350,6 +310,7 @@
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="bg-primary-dark text-white">
         <div class="container mx-auto px-6 py-8 text-center">
             <p class="text-sm">© 2024 Smile HQ Dental Clinic. All Rights Reserved.</p>
@@ -400,6 +361,36 @@
         });
 
         showReview(currentReviewIndex);
+
+        // JavaScript for gallery slider
+        const galleryImages = [
+            'https://images.unsplash.com/photo-1549429440-20593ddf613c?q=80&w=1964&auto=format&fit=crop',
+            './Images/p1.png',
+            './Images/p2.png',
+            './Images/p3.png',
+            './Images/p4.png',
+            './Images/p5.png'
+        ];
+        const galleryImageElement = document.getElementById('gallery-image');
+        const prevGalleryButton = document.getElementById('prev-gallery');
+        const nextGalleryButton = document.getElementById('next-gallery');
+        let currentGalleryIndex = 0;
+
+        function updateGalleryImage() {
+            galleryImageElement.src = galleryImages[currentGalleryIndex];
+        }
+
+        prevGalleryButton.addEventListener('click', () => {
+            currentGalleryIndex = (currentGalleryIndex - 1 + galleryImages.length) % galleryImages.length;
+            updateGalleryImage();
+        });
+
+        nextGalleryButton.addEventListener('click', () => {
+            currentGalleryIndex = (currentGalleryIndex + 1) % galleryImages.length;
+            updateGalleryImage();
+        });
+
+        updateGalleryImage();
     </script>
 
 </body>
