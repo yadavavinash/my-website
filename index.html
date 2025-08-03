@@ -46,7 +46,7 @@
     <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#home" class="flex items-center space-x-3">
-                <img src="https://raw.githubusercontent.com/yadavavinash/my-website/main/Dental%20Clinic%20Website/Images/Logo.png" alt="Smile HQ Dental Clinic Logo" class="h-10 w-auto">
+                <img src="./Images/Logo.png" alt="Smile HQ Dental Clinic Logo" class="h-10 w-auto">
                 <div>
                     <div class="text-xl font-medium text-text-primary leading-tight">Smile HQ</div>
                     <div class="text-xs font-light text-text-secondary tracking-widest leading-tight">DENTAL CLINIC</div>
@@ -97,9 +97,8 @@
                 </div>
                 <div class="md:w-1/2 mt-10 md:mt-0 relative md:pl-16 z-0">
                     <div class="absolute -inset-y-0.5 md:-inset-y-4 right-0 w-full md:w-3/4 bg-primary rounded-l-full hidden md:block"></div>
-                    <img src="https://raw.githubusercontent.com/yadavavinash/my-website/main/Dental%20Clinic%20Website/Images/Logo.png"
-                        onerror="this.onerror=null;this.src='https://placehold.co/600x400/E0F7FA/005F73?text=Smile+HQ+Clinic';"
-                        alt="A modern, clean dental clinic with state-of-the-art equipment." class="rounded-lg shadow-2xl relative z-10 mx-auto w-full max-w-lg md:max-w-none md:w-full h-full object-cover">
+                    <img src="./Images/Logo.png"
+                        alt="Smile HQ Dental Clinic Logo" class="rounded-lg shadow-2xl relative z-10 mx-auto w-full max-w-lg md:max-w-none md:w-full h-full object-cover">
                 </div>
             </div>
         </section>
@@ -120,7 +119,7 @@
                         </p>
                     </div>
                     <div class="md:w-1/2">
-                        <img src="https://raw.githubusercontent.com/yadavavinash/my-website/main/Dental%20Clinic%20Website/Images/Website%20Pic.jpeg"
+                        <img src="./Images/Website Pic.jpeg"
                              alt="A professional photo of Dr. Anita Chaudhary in her clinic." class="rounded-3xl shadow-2xl mx-auto w-64 h-64 md:w-80 md:h-80 object-cover border-8 border-primary-light transform rotate-3 hover:rotate-0 transition-transform duration-500">
                     </div>
                 </div>
@@ -184,18 +183,21 @@
 
         ---
 
-        <section id="gallery" class="py-20 md:py-28 bg-white">
+        <section id="gallery" class="py-20 md:py-28 bg-white relative">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-text-primary">A Look Inside Our Clinic</h2>
                     <p class="mt-4 text-lg text-text-secondary max-w-2xl mx-auto">Experience the clean, modern, and comfortable environment we've created for your care.</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <img src="https://raw.githubusercontent.com/yadavavinash/my-website/main/Dental%20Clinic%20Website/Images/p2.png" alt="A smiling patient with a dentist in a modern clinic." class="rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105 object-cover h-full w-full">
-                    <img src="https://raw.githubusercontent.com/yadavavinash/my-website/main/Dental%20Clinic%20Website/Images/p3.png" alt="A shot of a modern dental chair and equipment." class="rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105 object-cover h-full w-full">
-                    <img src="https://raw.githubusercontent.com/yadavavinash/my-website/main/Dental%20Clinic%20Website/Images/p4.png" alt="A dental hygienist performing a cleaning." class="rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105 object-cover h-full w-full">
-                    <img src="https://raw.githubusercontent.com/yadavavinash/my-website/main/Dental%20Clinic%20Website/Images/p5.png" alt="The front desk and waiting area of the clinic." class="rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105 object-cover h-full w-full">
-                    <img src="https://raw.githubusercontent.com/yadavavinash/my-website/main/Dental%20Clinic%20Website/Images/p1.png" alt="The front desk and waiting area of the clinic." class="rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105 object-cover h-full w-full">
+                <div class="relative w-full max-w-4xl mx-auto h-[400px] md:h-[550px] overflow-hidden rounded-lg shadow-xl">
+                    <img id="gallery-image" src="https://images.unsplash.com/photo-1549429440-20593ddf613c?q=80&w=1964&auto=format&fit=crop"
+                         alt="Creative dental art showing a clean tooth." class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out">
+                    <button id="prev-gallery" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-2 shadow-md transition-colors z-10">
+                        <svg class="w-6 h-6 text-text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    </button>
+                    <button id="next-gallery" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-2 shadow-md transition-colors z-10">
+                        <svg class="w-6 h-6 text-text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </button>
                 </div>
             </div>
         </section>
@@ -211,6 +213,23 @@
                 <div class="relative bg-white p-8 rounded-lg shadow-lg">
                     <div id="review-slider" class="overflow-hidden">
                         <div class="review-card active flex-col min-h-[300px] p-6">
+                            <div class="flex items-center mb-4 text-yellow-400">
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-5 h-5 fill-current ml-1" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-5 h-5 fill-current ml-1" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-5 h-5 fill-current ml-1" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-5 h-5 fill-current ml-1" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            </div>
+                            <p class="text-text-secondary italic mb-4 flex-grow text-justify">"Just got my teeth checked and honestly, the whole experience was great. The advice I received felt really genuine and not pushy at all. I had my teeth scaled too, and the process was super smooth and completely painless—which I wasn’t expecting! Even the post-consultation tips were clear, helpful, and felt like they truly cared."</p>
+                            <div class="flex items-center mt-auto">
+                                <img class="w-12 h-12 rounded-full mr-4" src="https://placehold.co/100x100/E0F7FA/005F73?text=N" alt="Avatar of Nikhil Agarwal">
+                                <div>
+                                    <p class="font-bold text-text-primary">Nikhil Agarwal</p>
+                                    <p class="text-sm text-gray-500">Google Review</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-card flex-col min-h-[300px] p-6">
                             <div class="flex items-center mb-4 text-yellow-400">
                                 <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                                 <svg class="w-5 h-5 fill-current ml-1" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
@@ -293,7 +312,7 @@
                 </div>
             </div>
         </section>
-        
+
         ---
 
         <section id="contact" class="py-20 md:py-28 bg-white">
@@ -337,7 +356,7 @@
                     </div>
                     <div class="lg:w-2/3 h-96 lg:h-auto rounded-lg shadow-lg overflow-hidden">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14234.331525048995!2d75.81490952196137!3d26.844205337746324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db5767b931e97%3A0x6a1c5d01f98d924d!2sSmile%20HQ%20Dental%20Clinic!5e0!3m2!1sen!2sin!4v1722744475470!5m2!1sen!2sin"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.118991754848!2d75.81490952196137!3d26.844205337746324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db6d7b57b98f5%3A0x6a0c5c4d0a1b6c0c!2sSmile%20HQ%20Dental%20Clinic!5e0!3m2!1sen!2sin!4v1678234567890!5m2!1sen!2sin"
                             width="100%"
                             height="100%"
                             style="border:0;"
@@ -376,8 +395,8 @@
 
         // JavaScript for review slider
         const reviews = document.querySelectorAll('.review-card');
-        const prevButton = document.getElementById('prev-review');
-        const nextButton = document.getElementById('next-review');
+        const prevReviewButton = document.getElementById('prev-review');
+        const nextReviewButton = document.getElementById('next-review');
         let currentReviewIndex = 0;
 
         function showReview(index) {
@@ -390,17 +409,48 @@
             });
         }
 
-        prevButton.addEventListener('click', () => {
+        prevReviewButton.addEventListener('click', () => {
             currentReviewIndex = (currentReviewIndex - 1 + reviews.length) % reviews.length;
             showReview(currentReviewIndex);
         });
 
-        nextButton.addEventListener('click', () => {
+        nextReviewButton.addEventListener('click', () => {
             currentReviewIndex = (currentReviewIndex + 1) % reviews.length;
             showReview(currentReviewIndex);
         });
 
         showReview(currentReviewIndex);
+
+        // JavaScript for gallery slider
+        const galleryImages = [
+            'https://images.unsplash.com/photo-1549429440-20593ddf613c?q=80&w=1964&auto=format&fit=crop',
+            './Images/p1.png',
+            './Images/p2.png',
+            './Images/p3.png',
+            './Images/p4.png',
+            './Images/p5.png'
+        ];
+        const galleryImageElement = document.getElementById('gallery-image');
+        const prevGalleryButton = document.getElementById('prev-gallery');
+        const nextGalleryButton = document.getElementById('next-gallery');
+        let currentGalleryIndex = 0;
+
+        function updateGalleryImage() {
+            galleryImageElement.src = galleryImages[currentGalleryIndex];
+        }
+
+        prevGalleryButton.addEventListener('click', () => {
+            currentGalleryIndex = (currentGalleryIndex - 1 + galleryImages.length) % galleryImages.length;
+            updateGalleryImage();
+        });
+
+        nextGalleryButton.addEventListener('click', () => {
+            currentGalleryIndex = (currentGalleryIndex + 1) % galleryImages.length;
+            updateGalleryImage();
+        });
+
+        // Initial image load for the gallery
+        updateGalleryImage();
     </script>
 
 </body>
