@@ -5,50 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smile HQ Dental Clinic - Dr. Anita Chaudhary</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'], // Sets the default font for most text.
+                        serif: ['Playfair Display', 'serif'], // Sets a special font for titles.
                     },
                     colors: {
                         primary: {
-                            light: '#E0F7FA',
-                            DEFAULT: '#007B8E',
-                            dark: '#005F73',
+                            light: '#E0F7FA', // A light blue color.
+                            DEFAULT: '#007B8E', // The main blue color for the brand.
+                            dark: '#005F73', // A dark blue color.
                         },
-                        secondary: '#F0F4F8',
-                        'text-primary': '#005F73',
-                        'text-secondary': '#334155',
-                        'accent': '#E8A3A3',
-                        'white': '#FFFFFF',
+                        secondary: '#F0F4F8', // A light grey color for backgrounds.
+                        'text-primary': '#005F73', // Main color for important text.
+                        'text-secondary': '#334155', // Secondary color for less important text.
+                        'accent': '#E8A3A3', // A highlight color for accents.
+                        'white': '#FFFFFF', // White color.
                     }
                 }
             }
         }
     </script>
+    
     <style>
-        html { scroll-behavior: smooth; }
-        .review-card { display: none; }
-        .review-card.active { display: flex; }
+        html { scroll-behavior: smooth; } /* Makes clicking on links scroll smoothly down the page. */
+        .review-card { display: none; } /* Hides all review cards by default. */
+        .review-card.active { display: flex; } /* Shows only the active review card. */
     </style>
 </head>
-<body class="bg-secondary font-sans">
 
+<body class="bg-secondary font-sans">
     <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#home" class="flex items-center space-x-3">
-                <img src="https://raw.githubusercontent.com/yadavavinash/my-website/main/Dental%20Clinic%20Website/Images/logo.png" alt="Smile HQ Dental Clinic Logo" class="w-12 h-auto">
+                <img src="Images/logo.png" alt="Smile HQ Dental Clinic Logo" class="w-12 h-auto">
                 <div>
                     <div class="text-xl font-serif font-bold text-text-primary leading-tight">Smile HQ</div>
                     <div class="text-[0.6rem] font-light text-text-secondary tracking-[0.2em] leading-tight mt-1 uppercase">DENTAL CLINIC</div>
                 </div>
             </a>
+            
             <div class="hidden md:flex items-center space-x-8">
                 <a href="#about" class="text-text-secondary hover:text-primary-dark transition-colors duration-300">About Us</a>
                 <a href="#services" class="text-text-secondary hover:text-primary-dark transition-colors duration-300">Services</a>
@@ -56,13 +60,16 @@
                 <a href="#reviews" class="text-text-secondary hover:text-primary-dark transition-colors duration-300">Reviews</a>
                 <a href="#contact" class="text-text-secondary hover:text-primary-dark transition-colors duration-300">Contact</a>
             </div>
+            
             <a href="tel:+917339827993" class="hidden md:block bg-primary hover:bg-primary-dark text-white font-semibold px-5 py-2 rounded-full shadow-md hover:shadow-lg transition-all duration-300">
                 Book Appointment
             </a>
+            
             <button id="mobile-menu-button" class="md:hidden text-primary-dark">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
         </nav>
+        
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
             <a href="#about" class="block text-text-secondary hover:text-primary-dark transition-colors duration-300">About Us</a>
             <a href="#services" class="block text-text-secondary hover:text-primary-dark transition-colors duration-300">Services</a>
@@ -102,7 +109,7 @@
             <div class="container mx-auto px-6">
                 <div class="flex flex-col md:flex-row items-center gap-12 md:gap-16">
                     <div class="md:w-1/2">
-                        <img src="https://raw.githubusercontent.com/yadavavinash/my-website/main/Dental%20Clinic%20Website/Images/Website%20Pic.JPEG"
+                        <img src="Images/anita.JPEG"
                              alt="A professional photo of Dr. Anita Chaudhary in her clinic." class="rounded-3xl shadow-xl mx-auto w-64 h-64 md:w-80 md:h-80 object-cover border-8 border-primary-light">
                     </div>
                     <div class="md:w-1/2 text-center md:text-left">
@@ -180,19 +187,19 @@
                 </div>
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
                     <div class="overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all duration-300">
-                        <img src="https://raw.githubusercontent.com/yadavavinash/my-website/main/Dental%20Clinic%20Website/Images/p1.png" alt="A clean and modern treatment room at Smile HQ" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+                        <img src="Images/p1.png" alt="A clean and modern treatment room at Smile HQ" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all duration-300">
-                        <img src="https://raw.githubusercontent.com/yadavavinash/my-website/main/Dental%20Clinic%20Website/Images/p2.png" alt="A close-up of advanced dental equipment" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+                        <img src="Images/p2.png" alt="A close-up of advanced dental equipment" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all duration-300">
-                        <img src="https://raw.githubusercontent.com/yadavavinash/my-website/main/Dental%20Clinic%20Website/Images/p3.png" alt="A welcoming and comfortable waiting area" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+                        <img src="Images/p3.png" alt="A welcoming and comfortable waiting area" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all duration-300">
-                        <img src="https://raw.githubusercontent.com/yadavavinash/my-website/main/Dental%20Clinic%20Website/Images/p4.png" alt="Dr. Anita Chaudhary with a patient" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+                        <img src="Images/p4.png" alt="Dr. Anita Chaudhary with a patient" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all duration-300">
-                        <img src="https://raw.githubusercontent.com/yadavavinash/my-website/main/Dental%20Clinic%20Website/Images/p5.png" alt="The clean and organized reception desk" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+                        <img src="Images/p5.png" alt="The clean and organized reception desk" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
                     </div>
                 </div>
             </div>
@@ -367,7 +374,7 @@
                     </div>
                     <div class="lg:w-2/3 h-96 lg:h-auto rounded-2xl shadow-lg overflow-hidden">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.4299447477383!2d75.8037305149959!3d26.85871238314991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db623512b918b%3A0x88981f7d54492985!2sSmile%20HQ%20Dental%20Clinic!5e0!3m2!1sen!2sin!4v1625076632731!5m2!1sen!2sin"
+                            src="http://googleusercontent.com/maps.google.com/5"
                             width="100%"
                             height="100%"
                             style="border:0;"
@@ -389,28 +396,32 @@
     </footer>
 
     <script>
-        // JavaScript for mobile menu toggle
+        // This JavaScript code makes the website interactive.
+        
+        // This part handles the mobile menu. It finds the menu button and the menu itself.
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-
+        // When you click the button, it either shows or hides the menu.
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
-
+        // This finds all the links inside the mobile menu.
         const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        // It makes the menu close when you click any of the links.
         mobileMenuLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
             });
         });
 
-        // JavaScript for review slider
-        const reviews = document.querySelectorAll('.review-card');
-        const prevButton = document.getElementById('prev-review');
-        const nextButton = document.getElementById('next-review');
-        let currentReviewIndex = 0;
+        // This part handles the review slider.
+        const reviews = document.querySelectorAll('.review-card'); // Finds all the review cards.
+        const prevButton = document.getElementById('prev-review'); // Finds the 'previous' button.
+        const nextButton = document.getElementById('next-review'); // Finds the 'next' button.
+        let currentReviewIndex = 0; // Starts the reviews at the first one.
 
         function showReview(index) {
+            // This function hides all reviews and then shows the one at the specified index.
             reviews.forEach((review, i) => {
                 review.classList.remove('active');
                 if (i === index) {
@@ -418,18 +429,17 @@
                 }
             });
         }
-
+        // When you click the 'previous' button, it moves to the previous review.
         prevButton.addEventListener('click', () => {
             currentReviewIndex = (currentReviewIndex - 1 + reviews.length) % reviews.length;
             showReview(currentReviewIndex);
         });
-
+        // When you click the 'next' button, it moves to the next review.
         nextButton.addEventListener('click', () => {
             currentReviewIndex = (currentReviewIndex + 1) % reviews.length;
             showReview(currentReviewIndex);
         });
-
-        // Show the first review initially
+        // This makes sure the first review is visible when the page loads.
         showReview(currentReviewIndex);
     </script>
 </body>
